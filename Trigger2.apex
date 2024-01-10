@@ -27,3 +27,17 @@ trigger AccountTrigger on Account(before insert, after insert)
 }
 
 //AccountTriggerHandler
+
+public class AccountTriggerHandler {
+    public static void beforeInsert(List<Account> newList)
+    {
+        for(Account acc: newList)
+        {
+            if(Acc.Industry !=null && acc.Industry == 'Media')
+            {
+                acc.Rating = 'Hot';
+            }
+            
+        }
+    }
+} 
