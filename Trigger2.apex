@@ -40,4 +40,22 @@ public class AccountTriggerHandler {
             
         }
     }
+
+    public static void createRelated OPP(List<Account> newList)
+    {
+        List<Opportunity> oppToBeInserted = new List<Opportunity>();
+        for(Account acc : newList)
+        {
+            Opportunity opp = new Opportunity();
+            opp.Name = acc.Name;
+            opp.AccountId = acc.Id;
+            opp.stageName = 'Prospecting';
+            opp.CloseDate = System.today();  
+
+            oppToBeInserted.add(opp);   
+        }
+        if(!oppToBeInserted.isEmpty()){
+            insert oppToBeInserted;
+        }
+    }
 } 
