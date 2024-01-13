@@ -20,4 +20,17 @@ trigger AccountTrigger on Account(before update, after update)
 
 //Trigger Handler Class
 
-public class AccountTriggerHandler {}
+public class AccountTriggerHandler 
+{
+  public static void updatePhoneDescription(List<Account> newList, )
+  {
+
+  }
+  
+  public static void updateRelatedPhone()
+  {
+
+  }
+  public static void updateRelatedPhone()
+  {}
+}
